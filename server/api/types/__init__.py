@@ -1,5 +1,6 @@
 
 import graphene
+from graphene_file_upload.scalars import Upload
 
 class Error(graphene.ObjectType):
     field = graphene.String(required=True)
@@ -10,6 +11,7 @@ class Prediction(graphene.ObjectType):
     class_id = graphene.Int(required=True)
     probability = graphene.Float(required=True)
     class_name = graphene.String(required=True)
+    text = graphene.String(required=True)
 
 
 
@@ -27,4 +29,9 @@ class PredictionResponse(graphene.ObjectType):
 
 
 class AIHumanInput(graphene.InputObjectType):
-    text = graphene.String(required=True)
+    text = graphene.String(required=False)
+    file = Upload(required=False)
+
+
+# curl http://localhost:3001/graphql -F operations='{"query": "mutation PredictAI($input: AIHumanInput!) { predictAI(input_: $input) { ok } }", "variables": { "input": {"file": null, text: "hello"} } }'  -F map='{ "0": ["variables.input.file"] }'  -F 0=@ai.txt
+# curl http://localhost:3001/graphql -F 'operations={"query": "mutation PredictAI($input: AIHumanInput!) { predictAI(input_: $input) { ok } }", "variables": { "input": { "file": null, "text": "Sample text" } } }' -F 'map={ "0": ["variables.input.file"] }' -F '0=@ai.txt'

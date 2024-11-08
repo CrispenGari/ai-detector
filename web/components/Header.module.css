@@ -1,0 +1,27 @@
+.header {
+  width: "100%";
+  background-color: var(--primary);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  user-select: none;
+  position: sticky;
+  z-index: 20;
+  top: 0;
+}
+
+.header > a {
+  display: flex !important;
+  align-items: center !important;
+  color: var(--main) !important;
+  gap: 10px !important;
+  text-decoration: none !important;
+}
+.header > a > h1 {
+  font-size: 0.8rem !important;
+  font-weight: 200 !important;
+  text-decoration: none !important;
+}
+.header__icon {
+  font-size: 30px !important;
+}

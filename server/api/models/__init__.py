@@ -69,7 +69,7 @@ def text_pipeline(x: str):
     return values
 
 
-def inference_preprocess_text(text, max_len=100, padding="pre"):
+def inference_preprocess_text(text, max_len=300, padding="pre"):
     assert (
         padding == "pre" or padding == "post"
     ), "the padding can be either pre or post"

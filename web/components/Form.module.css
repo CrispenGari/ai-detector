@@ -1,0 +1,233 @@
+.form {
+  flex: 1;
+}
+
+.form > form,
+.result {
+  width: "100%" !important;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  position: relative;
+  padding: 20px;
+}
+.form > form {
+  flex-direction: row;
+  gap: 10px;
+}
+.result {
+  user-select: none;
+  background-color: var(--tertiary);
+  border-radius: 10px;
+}
+.loading {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  top: 0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.text_area {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 10px;
+}
+.text_area > button,
+.file_area > button {
+  background-color: var(--tertiary);
+  border: none;
+  outline: none;
+  color: var(--main);
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 500ms ease;
+  cursor: pointer;
+  max-width: 200px;
+}
+.file_area > button {
+  margin-top: 20px;
+}
+.text_area > button:hover,
+.file_area > button:hover {
+  background-color: var(--primary);
+}
+
+.text_area > textarea {
+  resize: none;
+  outline: none;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid var(--tertiary);
+  border-radius: 10px;
+  padding: 10px;
+  width: "100%";
+  height: 200px;
+}
+
+.indicator {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 3px solid var(--main);
+  border-left-color: var(--tertiary);
+  animation: rotate 1s ease 0s infinite;
+}
+
+.result > h1 {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.result > p {
+  font-size: 0.7rem;
+  text-align: justify;
+}
+
+.icon__button {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: none;
+  color: var(--main);
+  background-color: var(--tertiary);
+  font-size: 16px;
+  transition: all 500ms ease;
+  cursor: pointer;
+}
+
+.icon__button:hover {
+  background-color: var(--primary);
+}
+
+.file__modal {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.file__modal__form {
+  background-color: var(--main);
+  width: "100%" !important;
+  margin: 10px auto;
+  max-width: 500px;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+}
+.file__modal__form > h2 {
+  width: 100%;
+}
+
+.file__modal__form > h1 {
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 5px;
+  font-size: 1rem;
+  text-align: center;
+}
+.file__modal__form > label {
+  width: 100%;
+  height: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+  border: 2px dashed lightgray;
+  border-radius: 5px;
+}
+.file__modal__form > label > svg {
+  display: none !important;
+}
+.file__modal__form > label > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+}
+.file__modal__form > label > div > span:last-of-type {
+  display: none;
+}
+.selected__file {
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  flex: 1;
+}
+.file_area {
+  width: "100%" !important;
+  margin: 10px auto;
+  max-width: 500px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.selected__file > p {
+  font-size: 0.8rem;
+  text-decoration: underline;
+  user-select: none;
+}
+
+.selected__file > button {
+  outline: none;
+  border: none;
+  color: var(--main);
+  background-color: var(--secondary);
+  transition: all 500ms ease;
+  cursor: pointer;
+  font-size: 0.8rem;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.selected__file > button:hover {
+  background-color: var(--primary);
+}
+.error {
+  width: "100%" !important;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  position: relative;
+  padding: 10px;
+  user-select: none;
+  background-color: var(--secondary);
+  color: var(--main);
+  border-radius: 5px;
+}
+.error > h1 {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.error > p {
+  font-size: 0.7rem;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

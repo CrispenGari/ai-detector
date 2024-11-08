@@ -1,0 +1,36 @@
+.not__found {
+  flex: 1;
+  flex-direction: column;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  user-select: none;
+  gap: 30px;
+}
+
+.not__found > h1 {
+  font-size: 1rem;
+}
+
+.not__found > h2 {
+  letter-spacing: 1px;
+}
+.not__found > a {
+  color: var(--tertiary) !important;
+}
+
+.not__found > h2 > span:nth-of-type(2) {
+  color: var(--tertiary) !important;
+  position: relative;
+  animation: jump 1s ease 0s infinite alternate-reverse forwards;
+}
+
+@keyframes jump {
+  from {
+    top: 0;
+  }
+  to {
+    top: -30px;
+  }
+}
