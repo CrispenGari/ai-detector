@@ -6,7 +6,7 @@ import { FileUploader } from "react-drag-drop-files";
 import { gql, useMutation } from "@urql/next";
 
 const Form = () => {
-  const [{ data, fetching, error }, detectAI] = useMutation(mutation);
+  const [{ data, fetching }, detectAI] = useMutation(mutation);
   const [state, setState] = React.useState<{
     text: string;
     file: any;
@@ -47,7 +47,7 @@ const Form = () => {
             />
           </div>
         </div>
-      ) : null}
+      ) : undefined}
       <div className={styles.form}>
         <form onSubmit={onSubmit}>
           {fetching ? (

@@ -23,13 +23,13 @@ const Page = () => {
   );
 };
 
-export default () => {
+const Providers = () => {
   const [client, ssr] = React.useMemo(() => {
     const ssr = ssrExchange({
       isClient: typeof window !== "undefined",
     });
     const client = createClient({
-      url: "http://127.0.0.1:3001/graphql",
+      url: "https://ai-detector-2g6m.onrender.com/graphql",
       exchanges: [cacheExchange, ssr, fetchExchange],
       suspense: true,
     });
@@ -42,3 +42,5 @@ export default () => {
     </UrqlProvider>
   );
 };
+
+export default Providers;
