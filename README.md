@@ -4,6 +4,23 @@
 
 <p align="center"><img src="/images/logo.png" alt="ai-detector" width="200"/></p>
 
+---
+
+<p align="center">
+  <a href="https://github.com/crispengari/ai-detector/actions/workflows/ci.yml">
+    <img src="https://github.com/crispengari/ai-detector/actions/workflows/ci.yml/badge.svg" alt="CI Status">
+  </a>
+   <a href="https://github.com/crispengari/ai-detector/blob/main/LICENSE">
+    <img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License: MIT">
+  </a>
+  <a href="https://typescriptlang.org/">
+    <img src="https://img.shields.io/badge/language-typescript-blue.svg" alt="Language: TypeScript">
+  </a>
+  <a href="https://www.python.org/">
+    <img src="https://img.shields.io/badge/language-python-blue.svg" alt="Language: Python">
+  </a>
+</p>
+
 You can access the hosted web app at: https://ai-detector-sage.vercel.app/ which serves a graphql API which is served at [GraphQL API](https://ai-detector-2g6m.onrender.com/graphql). Here is the preview of the app.
 
 <p align="center"><img src="/images/preview.jpg" alt="ai-detector" width="100%"/></p>

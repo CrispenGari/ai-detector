@@ -8,7 +8,7 @@ class TestPrediction:
         client = Client(gschema)
         executed = client.execute("""
          mutation {
-  predictAI(input_: {text: "Helllo there i am a user"}) {
+  predictAI(input_: {text: "Texting and driving can be avoided in many of the following ways. 1. By pulling over to the side of the road. 2. By keeping your phone out of sight and reach. 3. By turning off do not disturb. 4. By mounting your phone to something if you are using a navigation app. 5. By leaving your phone at home. The list could to on and on. Using your phone and driving is a bad and sometimes expensive habit. You should not do this."}) {
     ok
     prediction {
       error {
@@ -17,7 +17,6 @@ class TestPrediction:
       }
       prediction {
         classId
-        probability
         className
       }
     }
@@ -33,7 +32,6 @@ class TestPrediction:
                         "error": None,
                         "prediction": {
                             "classId": 0,
-                            "probability": 0.887,
                             "className": "human",
                         },
                     },
@@ -50,7 +48,7 @@ class TestPrediction:
         client = Client(gschema)
         executed = client.execute("""
    mutation {
-  predictAI(input_: {text: "Fifth reason is that stricter gun control laws work. In countries where they have stricter laws, there are less shootings. Like, in Australia, they have strict laws and hardly no shootings. Its just common sense."}) {
+  predictAI(input_: {text: "So, in conclusion, we need stricter gun control laws. Guns r dangerous, there's too much violence, guns r easy to get, they are not just for hunting, and stricter laws work. We have to do sum thin bout this. We can't just sit around and let peoples get killed. It's time for change."}) {
     ok
     prediction {
       error {
@@ -59,7 +57,6 @@ class TestPrediction:
       }
       prediction {
         classId
-        probability
         className
       }
     }
@@ -75,7 +72,6 @@ class TestPrediction:
                         "error": None,
                         "prediction": {
                             "classId": 1,
-                            "probability": 1,
                             "className": "ai",
                         },
                     },
